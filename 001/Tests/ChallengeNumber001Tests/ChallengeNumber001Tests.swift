@@ -17,4 +17,8 @@ final class ChallengeNumber001Tests: XCTestCase {
 	func test_text_initialValue() {
 		XCTAssertEqual(sut.text, "Hello, World!")
 	}
+
+	func test_wordSearch_listOfWordsIsEmpty_shouldReturnAnEmptyArray() {
+		XCTAssertEqual(sut.wordSearch("str", []), [])
+	}
 }
