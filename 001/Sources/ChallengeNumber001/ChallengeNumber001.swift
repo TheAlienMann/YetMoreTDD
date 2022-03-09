@@ -1,3 +1,5 @@
+import Foundation
+
 public struct ChallengeNumber001 {
 	public private(set) var text = "Hello, World!"
 
@@ -6,6 +8,13 @@ public struct ChallengeNumber001 {
 	func wordSearch(_ str: String, _ arr: [String]) -> [String] {
 		guard !arr.isEmpty else { return [] }
 		guard !str.isEmpty else { return ["Empty"] }
-		return [str]
+		var result = [String]()
+		for word in arr {
+			if word.contains(str) {
+				result.append(word)
+			}
+		}
+
+		return result
 	}
 }

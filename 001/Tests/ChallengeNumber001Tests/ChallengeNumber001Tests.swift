@@ -25,4 +25,8 @@ final class ChallengeNumber001Tests: XCTestCase {
 	func test_wordSearch_givenPatternIsEmpty_shouldReturnAnArrayContainingAStringASEmpty() {
 		XCTAssertEqual(sut.wordSearch("", ["some string"]), ["Empty"])
 	}
+
+	func test_wordSearch_givenPattern_shouldReturnAnArrayOfMatches() {
+		XCTAssertEqual(sut.wordSearch("ab", ["ab", "abc", "cde"]), ["ab", "abc"])
+	}
 }
