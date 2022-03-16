@@ -2,10 +2,23 @@ import XCTest
 @testable import StringCalculator
 
 final class StringCalculatorTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(StringCalculator().text, "Hello, World!")
-    }
+  func test_StringCalculator_canBeInitialized() {
+    let sut = StringCalculator()
+    XCTAssertNotNil(sut)
+  }
+
+  func test_addNumbers_returnsOneForOne() {
+    let sut = StringCalculator()
+    XCTAssertEqual(sut.addNumber("1"), 1)
+  }
+
+  func test_addNumbers_returnsTwoForTwo() {
+    let sut = StringCalculator()
+    XCTAssertEqual(sut.addNumber("2"), 2)
+  }
+
+  func test_shouldSlitInputBasedOnCommaSeparator() {
+    let sut = StringCalculator()
+    XCTAssertEqual(sut.splitInput("1,2"), [1, 2])
+  }
 }

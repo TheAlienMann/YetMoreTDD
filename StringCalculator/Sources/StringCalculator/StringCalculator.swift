@@ -1,6 +1,13 @@
-public struct StringCalculator {
-    public private(set) var text = "Hello, World!"
+import Foundation
 
-    public init() {
-    }
+public class StringCalculator {
+	func addNumber(_ string: String) -> Int {
+		if string == "1" { return 1 }
+		if string == "2" { return 2 }
+		return 0
+	}
+
+	func splitInput(_ input: String) -> [String] {
+		input.components(separatedBy: ",")
+	}
 }

@@ -1,0 +1,15 @@
+{
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Test StringCalculator",
+			"program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+			"args": [
+				".build/debug/StringCalculatorPackageTests.xctest"
+			],
+			"cwd": "${workspaceFolder:StringCalculator}",
+			"preLaunchTask": "swift: Build All"
+		}
+	]
+}
