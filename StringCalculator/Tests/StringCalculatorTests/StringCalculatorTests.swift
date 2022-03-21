@@ -44,4 +44,12 @@ final class StringCalculatorTests: XCTestCase {
 	func test_shouldSlitInputBasedOnSeparator() {
 		XCTAssertEqual(sut.splitInput("1,2"), ["1", "2"])
 	}
+
+	func test_shouldSlitInputBasedOnNoSeparator() {
+		XCTAssertEqual(sut.splitInput("1,2"), ["1", "2"])
+	}
+
+	func test_shouldSlitInputBasedOnMultipleSeparators() {
+		XCTAssertEqual(sut.splitInput("1,; 2"), ["1", "2"])
+	}
 }

@@ -8,7 +8,7 @@ public class StringCalculator {
 	}
 
 	func splitInput(_ input: String) -> [String] {
-		let characterSet = CharacterSet(charactersIn: ", #")
-		return input.components(separatedBy: characterSet)
+		let characterSet = CharacterSet(charactersIn: ",;_* #")
+		return input.components(separatedBy: characterSet).filter { !$0.isEmpty }
 	}
 }
